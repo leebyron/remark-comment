@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "dependencies": {
+    "micromark": "^3.0.10",
+    "rehype-stringify": "^9.0.2",
+    "remark-comment": "../",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "remark-stringify": "^10.0.2",
+    "unified": "^10.1.1"
+  },
+  "scripts": {
+    "test": "node test.mjs"
+  }
+}
