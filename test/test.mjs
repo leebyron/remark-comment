@@ -47,6 +47,10 @@ has a multi-line comment
 multi-line 
 comment -->
 
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
+
 and a paragraph
 `
   ),
@@ -68,6 +72,10 @@ has a multi-line comment
 multi-line 
 comment -->
 
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
+
 and a paragraph
 `,
     { ast: true }
@@ -83,6 +91,10 @@ has a multi-line comment
 <!-- another 
 multi-line 
 comment -->
+
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
 
 and a paragraph
 `)
@@ -101,6 +113,10 @@ has a multi-line comment
 <!-- another 
 multi-line 
 comment -->
+
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
 
 and a paragraph
 `
@@ -124,11 +140,15 @@ has a multi-line comment
 multi-line 
 comment -->
 
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
+
 and a paragraph
 `,
     { ast: true }
   ),
-  '<h1>This document</h1>\n\n\n\n<p>and a paragraph</p>'
+  '<h1>This document</h1>\n\n\n\n\n\n<p>and a paragraph</p>'
 )
 
 // It renders to HTML via Micromark
