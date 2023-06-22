@@ -109,6 +109,10 @@ function tokenize(effects, ok, nok) {
       return nok(code)
     }
 
+    if (markdownLineEnding(code)) {
+      return atLineEnding(code);
+    }
+
     effects.enter(types.data)
 
     if (code === codes.dash) {
