@@ -39,6 +39,10 @@ assert.equal(
 
 <!-- has a comment -->
 
+<!--
+has a multi-line comment 
+-->
+
 and a paragraph
 `
   ),
