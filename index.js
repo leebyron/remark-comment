@@ -178,7 +178,9 @@ function tokenize(effects, ok, nok) {
   function end(code) {
     if (code === codes.greaterThan) {
       effects.exit(types.data)
+      effects.enter('commentEnd') // See https://github.com/leebyron/remark-comment/pull/3#discussion_r1239494357
       effects.consume(code)
+      effects.exit('commentEnd')
       effects.exit('comment')
       return ok(code)
     }
