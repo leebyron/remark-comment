@@ -10,6 +10,6 @@
     "unified": "^10.1.1"
   },
   "scripts": {
-    "test": "node test.mjs"
+    "test": "node --conditions development test.mjs"
   }
 }
