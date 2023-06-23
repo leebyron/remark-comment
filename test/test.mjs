@@ -39,6 +39,18 @@ assert.equal(
 
 <!-- has a comment -->
 
+<!--
+has a multi-line comment 
+-->
+
+<!-- another 
+multi-line 
+comment -->
+
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
+
 and a paragraph
 `
   ),
@@ -52,12 +64,40 @@ assert.equal(
 
 <!-- has a comment -->
 
+<!--
+has a multi-line comment 
+-->
+
+<!-- another 
+multi-line 
+comment -->
+
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
+
 and a paragraph
 `,
     { ast: true }
   ),
-  '# This <!-- inline -->document\n\n<!-- has a comment -->\n\nand a paragraph\n'
-)
+    `# This <!-- inline -->document
+
+<!-- has a comment -->
+
+<!--
+has a multi-line comment 
+-->
+
+<!-- another 
+multi-line 
+comment -->
+
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
+
+and a paragraph
+`)
 
 // It renders to HTML via Rehype
 assert.equal(
@@ -65,6 +105,18 @@ assert.equal(
     `# This <!-- inline -->document
 
 <!-- has a comment -->
+
+<!--
+has a multi-line comment 
+-->
+
+<!-- another 
+multi-line 
+comment -->
+
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
 
 and a paragraph
 `
@@ -80,11 +132,23 @@ assert.equal(
 
 <!-- has a comment -->
 
+<!--
+has a multi-line comment 
+-->
+
+<!-- another 
+multi-line 
+comment -->
+
+<!--\\n\\n-->
+
+<!--\\na\\n\\nb\\n-->
+
 and a paragraph
 `,
     { ast: true }
   ),
-  '<h1>This document</h1>\n\n<p>and a paragraph</p>'
+  '<h1>This document</h1>\n\n\n\n\n\n<p>and a paragraph</p>'
 )
 
 // It renders to HTML via Micromark
@@ -93,6 +157,14 @@ assert.equal(
     `# This <!-- inline -->document
 
 <!-- has a comment -->
+
+<!--
+has a multi-line comment 
+-->
+
+<!-- another 
+multi-line 
+comment -->
 
 and a paragraph
 `
