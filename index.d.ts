@@ -11,7 +11,7 @@ export function commentToMarkdown(
   options?: Options | undefined
 ): ToMarkdownExtension
 
-export type Options = { emit?: boolean }
+export type Options = { ast?: boolean }
 export type Root = import('mdast').Root
 export type Extension = import('micromark-util-types').Extension
 export type HtmlExtension = import('micromark-util-types').HtmlExtension
